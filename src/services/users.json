@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Alonsito",
+        "mail": "Fernandito.rapidin@gmail.com",
+        "password": "33?",
+        "comment": "Esto no funcionaaa!!!!"
+    },
+    {
+        "id": 2,
+        "name": "xX_Miguelito_Xx",
+        "mail": "ermigue@gmail.com",
+        "password": "surmanitox",
+        "comment": "Asoplaaaa!"
+    },
+    {
+        "id": 3,
+        "name": "manito",
+        "mail": "manin.maninez@gmail.com",
+        "password": "12344321",
+        "comment": "Esto ta to guapo nene"
+    },
+    {
+        "id": 4,
+        "name": "Messi",
+        "mail": "lionel.messi@gmail.com",
+        "password": "chesoycampeondelmundo",
+        "comment": "Ché y mi casita?"
+    }
+]
