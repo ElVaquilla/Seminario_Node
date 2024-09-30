@@ -9,7 +9,9 @@ const router = express.Router()
 router.get('/', async (_req, res) => {
   try {
     const data = await reseñasServices.getEntries.getAll()
-    return res.json(data)
+    if (data){
+      return res.status(200).json(data)
+    }
   } catch (error) {
     return res.status(500).json({ error: 'Error al obtener las reseñas' })
   }
@@ -20,7 +22,7 @@ router.get('/:id', async (req, res) => {
   try {
     const data = await reseñasServices.getEntries.findById(req.params.id)
     if (data != null) {
-      return res.json(data)
+      return res.status(200).json(data)
     } else {
       return res.status(404).json({ error: 'No se ha encontrado la reseña' })
     }
@@ -34,7 +36,7 @@ router.get('/user/:id', async (req, res) => {
   try {
     const data = await reseñasServices.getEntries.findUserById(req.params.id)
     if (data != null) {
-      return res.json(data)
+      return res.status(200).json(data)
     } else {
       return res.status(404).json({ error: 'Usuario no encontrado' })
     }
@@ -58,7 +60,7 @@ router.put('/:id', async (req, res) => {
   try {
     const data = await reseñasServices.getEntries.update(req.params.id, req.body)
     if (data != null) {
-      return res.json(data)
+      return res.status(200).json(data)
     } else {
       return res.status(404).json({ error: 'Reseña no encontrada para actualizar' })
     }
@@ -72,7 +74,7 @@ router.delete('/:id', async (req, res) => {
   try {
     const data = await reseñasServices.getEntries.delete(req.params.id)
     if (data != null) {
-      return res.json({ message: 'Reseña eliminada con éxito' })
+      return res.status(200).json({ message: 'Reseña eliminada con éxito' })
     } else {
       return res.status(404).json({ error: 'Reseña no encontrada para eliminar' })
     }
