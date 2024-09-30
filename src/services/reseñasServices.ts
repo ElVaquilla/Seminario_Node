@@ -2,7 +2,7 @@ import { reseñasofDB } from '../modelos/types_d_reseñas'
 
 export const getEntries = {
   getAll: async () => {
-    return await resñasofDB.find()
+    return await reseñasofDB.find()
   },
   findById: async (id: string) => {
     return await reseñasofDB.findById(id)
